@@ -1,0 +1,36 @@
+title: NIPAL AI 블로그
+description: AI 검색 시대의 마케팅 노트 — GEO·AEO 인사이트, AI 답변 인용 전략, 실행 노트를 한곳에.
+url: https://nipal-ai.com
+lang: ko-KR
+timezone: Asia/Seoul
+
+# 미래 날짜 포스트 허용
+future: true
+
+author:
+  name: NIPAL AI
+  email: ask@nipal-ai.com
+  url: https://nipal-ai.com/
+
+logo: /assets/img/logo.png
+image: /og.png
+
+permalink: /blog/:slug/
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - node_modules/
+  - README.md

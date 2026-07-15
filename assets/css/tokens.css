@@ -1,0 +1,186 @@
+/* ==========================================================================
+   NIPAL AI — Brand Tokens (blog)
+   구 GeoMoment tokens.css와 변수명 호환 — 값만 NIPAL 디자인 시스템으로 교체
+   ========================================================================== */
+
+:root {
+  /* ---------- Brand ---------- */
+  --indigo: #4d57f5;
+  --violet: #7052f3;
+  --grad-brand: linear-gradient(135deg, #4d57f5 0%, #7052f3 100%);
+
+  /* ---------- Neutrals (NIPAL ink scale) ---------- */
+  --ink-900: #111216;
+  --ink-800: #202228;
+  --ink-700: #3e4149;
+  --ink-600: #54575f;
+  --ink-500: #6d7079;
+  --ink-400: #9699a2;
+  --ink-300: #9699a2;
+  --ink-200: #d8d8da;
+  --ink-100: #e4e4e5;
+  --ink-50:  #f7f6f3;
+  --bone:    #ffffff;
+  --snow:    #ffffff;
+
+  /* ---------- Accent tints ---------- */
+  --indigo-50: #ebedff;
+
+  /* ---------- Semantic ---------- */
+  --success: #1e8b5b;
+  --warning: #b85e16;
+  --error:   #c13e48;
+  --info:    #4d57f5;
+
+  /* ---------- Typography — Pretendard 단독 ---------- */
+  --font-display: 'Pretendard Variable', 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+  --font-body:    'Pretendard Variable', 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+  --font-korean:  'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
+  --font-mono:    ui-monospace, 'SF Mono', 'Consolas', 'Pretendard', monospace;
+
+  /* ---------- Type scale ---------- */
+  --fs-display:  72px;
+  --fs-h1:       56px;
+  --fs-h2:       40px;
+  --fs-h3:       28px;
+  --fs-body-lg:  18px;
+  --fs-body:     16px;
+  --fs-caption:  14px;
+  --fs-micro:    12px;
+
+  /* ---------- Spacing ---------- */
+  --sp-1:   4px;
+  --sp-2:   8px;
+  --sp-3:   12px;
+  --sp-4:   16px;
+  --sp-5:   24px;
+  --sp-6:   32px;
+  --sp-7:   48px;
+  --sp-8:   64px;
+  --sp-9:   96px;
+  --sp-10:  128px;
+  --sp-11:  192px;
+
+  /* ---------- Radius (NIPAL 라운드 — 크게) ---------- */
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 18px;
+
+  /* ---------- Shadow ---------- */
+  --shadow-sm: 0 1px 2px rgba(17, 18, 22, 0.05);
+  --shadow-md: 0 10px 30px rgba(17, 18, 22, 0.07);
+  --shadow-lg: 0 28px 80px rgba(17, 18, 22, 0.12), 0 4px 14px rgba(17, 18, 22, 0.05);
+
+  /* ---------- Layout ---------- */
+  --container: 1240px;
+  --section-py-desktop: 128px;
+  --section-py-mobile: 80px;
+}
+
+/* ==========================================================================
+   Base type styles
+   ========================================================================== */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.65;
+  color: var(--ink-900);
+  background: var(--bone);
+  letter-spacing: -0.014em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink-900);
+  word-break: keep-all;
+}
+p, li { word-break: keep-all; }
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.eyebrow {
+  font-size: var(--fs-micro);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-500);
+}
+
+/* ==========================================================================
+   Buttons — NIPAL 알약 문법 (홈과 동일)
+   ========================================================================== */
+
+.btn-primary {
+  display: inline-block;
+  background: var(--ink-900);
+  color: var(--snow);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-primary:hover {
+  background: #2b2d34;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--ink-900);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  border: 1px solid var(--ink-100);
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.15s ease;
+}
+.btn-secondary:hover {
+  border-color: var(--ink-900);
+}
+
+/* ==========================================================================
+   Dark section override
+   ========================================================================== */
+
+.dark {
+  background: var(--ink-900);
+  color: var(--bone);
+}
+.dark h1, .dark h2, .dark h3 { color: var(--bone); }
+.dark .eyebrow { color: var(--ink-300); }
+.dark .btn-secondary {
+  color: var(--bone);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+.dark .btn-secondary:hover { border-color: var(--bone); }

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" width="880" height="560" role="img" aria-label="SEO와 GEO/AEO의 관계를 보여주는 벤 다이어그램">
+  <defs>
+    <style>
+      .title { font: 700 22px 'Pretendard', 'Malgun Gothic', sans-serif; fill: #0B0B0F; }
+      .subtitle { font: 400 13px 'Pretendard', 'Malgun Gothic', sans-serif; fill: #5A5A66; }
+      .chip-label { font: 700 14px 'Pretendard', 'Malgun Gothic', sans-serif; fill: #FFFFFF; text-anchor: middle; }
+      .chip-sub { font: 500 11px 'Pretendard', 'Malgun Gothic', sans-serif; fill: #FFFFFF; opacity: 0.92; text-anchor: middle; }
+      .item { font: 500 13px 'Pretendard', 'Malgun Gothic', sans-serif; fill: #2A2A33; }
+      .common-tag { font: 700 11px 'Consolas', monospace; fill: #5A5A66; letter-spacing: 0.5px; text-anchor: middle; }
+      .common { font: 700 16px 'Pretendard', 'Malgun Gothic', sans-serif; fill: #0B0B0F; text-anchor: middle; }
+      .game-tag { font: 700 10px 'Consolas', monospace; letter-spacing: 0.5px; }
+      .game-quote { font: 500 12.5px 'Pretendard', 'Malgun Gothic', sans-serif; fill: #2A2A33; }
+    </style>
+  </defs>
+
+  <rect width="880" height="560" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text class="title" x="440" y="44" text-anchor="middle">SEO와 GEO는 무엇이 같고, 무엇이 다른가</text>
+  <text class="subtitle" x="440" y="66" text-anchor="middle">같은 사이트에서 두 게임이 동시에 진행됩니다. 평가 기준이 다를 뿐.</text>
+
+  <!-- Two circles (higher saturation) -->
+  <circle cx="320" cy="290" r="180" fill="#3D3DFF" fill-opacity="0.18" stroke="#3D3DFF" stroke-width="2.5"/>
+  <circle cx="560" cy="290" r="180" fill="#7B5BFF" fill-opacity="0.18" stroke="#7B5BFF" stroke-width="2.5"/>
+
+  <!-- SEO label chip (top-left of left circle) -->
+  <rect x="160" y="118" width="120" height="50" rx="10" fill="#3D3DFF"/>
+  <text class="chip-label" x="220" y="142">SEO</text>
+  <text class="chip-sub" x="220" y="160">전통 검색 최적화</text>
+
+  <!-- GEO label chip (top-right of right circle) -->
+  <rect x="600" y="118" width="120" height="50" rx="10" fill="#7B5BFF"/>
+  <text class="chip-label" x="660" y="142">GEO / AEO</text>
+  <text class="chip-sub" x="660" y="160">답변 엔진 최적화</text>
+
+  <!-- SEO items (left side) -->
+  <text class="item" x="200" y="245" text-anchor="middle">검색어 매칭</text>
+  <text class="item" x="200" y="268" text-anchor="middle">백링크 · DA</text>
+  <text class="item" x="200" y="291" text-anchor="middle">기술 SEO</text>
+  <text class="item" x="200" y="314" text-anchor="middle">1순위 랭킹</text>
+  <text class="item" x="200" y="337" text-anchor="middle">클릭당 트래픽</text>
+
+  <!-- GEO items (right side) -->
+  <text class="item" x="680" y="245" text-anchor="middle">청크 적합도</text>
+  <text class="item" x="680" y="268" text-anchor="middle">entity 신호</text>
+  <text class="item" x="680" y="291" text-anchor="middle">권위 출처</text>
+  <text class="item" x="680" y="314" text-anchor="middle">답변 인용</text>
+  <text class="item" x="680" y="337" text-anchor="middle">AI 답변 노출</text>
+
+  <!-- CENTER: White rounded card highlighting common ground -->
+  <rect x="378" y="262" width="124" height="78" rx="14" fill="#FFFFFF" stroke="#0B0B0F" stroke-width="1.5"/>
+  <text class="common-tag" x="440" y="284">COMMON</text>
+  <text class="common" x="440" y="312">공통 자산</text>
+  <text class="common" x="440" y="332">좋은 콘텐츠</text>
+
+  <!-- Game tag boxes (bottom) -->
+  <rect x="80" y="492" width="320" height="52" rx="10" fill="#EEEEFF" stroke="none"/>
+  <text class="game-tag" x="100" y="514" fill="#3D3DFF">SEO의 게임</text>
+  <text class="game-quote" x="100" y="534">“우리 페이지가 1순위에 가는가?”</text>
+
+  <rect x="480" y="492" width="320" height="52" rx="10" fill="#F0EBFF" stroke="none"/>
+  <text class="game-tag" x="500" y="514" fill="#7B5BFF">GEO/AEO의 게임</text>
+  <text class="game-quote" x="500" y="534">“AI 답변에 우리 단락이 들어가는가?”</text>
+</svg>

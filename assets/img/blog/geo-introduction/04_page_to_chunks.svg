@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520" width="880" height="520" role="img" aria-label="페이지가 청크로 분할되고 답변 적합도 점수가 매겨지는 과정 도식">
+  <defs>
+    <style>
+      .title { font: 700 22px 'Pretendard', 'Malgun Gothic', sans-serif; fill: #0B0B0F; }
+      .subtitle { font: 400 13px 'Pretendard', 'Malgun Gothic', sans-serif; fill: #5A5A66; }
+      .url-text { font: 600 11px 'Consolas', monospace; fill: #5A5A66; }
+      .url-tag { font: 700 10px 'Consolas', monospace; fill: #9A9AA3; letter-spacing: 0.5px; }
+      .chunk-tag { font: 700 10px 'Consolas', monospace; letter-spacing: 0.5px; }
+      .chunk-body { font: 500 12px 'Pretendard', 'Malgun Gothic', sans-serif; }
+      .arrow-label { font: 700 12px 'Pretendard', 'Malgun Gothic', sans-serif; fill: #7B5BFF; text-anchor: middle; }
+      .arrow-sub { font: 400 10.5px 'Pretendard', 'Malgun Gothic', sans-serif; fill: #5A5A66; text-anchor: middle; }
+      .footer { font: 500 12px 'Pretendard', 'Malgun Gothic', sans-serif; fill: #2A2A33; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect width="880" height="520" fill="#FFFFFF"/>
+
+  <text class="title" x="440" y="42" text-anchor="middle">AI는 페이지가 아니라 청크 단위로 인용합니다</text>
+  <text class="subtitle" x="440" y="64" text-anchor="middle">한 페이지가 200~500자 단위 청크로 잘리고, 그중 답변 적합도가 높은 청크만 인용됩니다.</text>
+
+  <!-- LEFT: Page mock -->
+  <g transform="translate(60, 110)">
+    <rect width="240" height="320" rx="10" fill="#F5F5F7" stroke="#E8E8EA" stroke-width="1"/>
+    <text class="url-tag" x="18" y="28">PAGE</text>
+    <text class="url-text" x="18" y="48">/booking/mice-package</text>
+    <line x1="18" y1="62" x2="222" y2="62" stroke="#E8E8EA" stroke-width="1"/>
+
+    <!-- placeholder text lines -->
+    <g fill="#D4D4DA">
+      <rect x="18" y="80"  width="200" height="6" rx="2"/>
+      <rect x="18" y="94"  width="170" height="6" rx="2"/>
+      <rect x="18" y="108" width="190" height="6" rx="2"/>
+      <rect x="18" y="122" width="100" height="6" rx="2"/>
+
+      <rect x="18" y="148" width="180" height="6" rx="2"/>
+      <rect x="18" y="162" width="195" height="6" rx="2"/>
+      <rect x="18" y="176" width="120" height="6" rx="2"/>
+
+      <rect x="18" y="202" width="170" height="6" rx="2"/>
+      <rect x="18" y="216" width="200" height="6" rx="2"/>
+      <rect x="18" y="230" width="180" height="6" rx="2"/>
+      <rect x="18" y="244" width="90"  height="6" rx="2"/>
+
+      <rect x="18" y="270" width="195" height="6" rx="2"/>
+      <rect x="18" y="284" width="140" height="6" rx="2"/>
+      <rect x="18" y="298" width="170" height="6" rx="2"/>
+    </g>
+  </g>
+
+  <!-- ARROW -->
+  <g transform="translate(330, 250)">
+    <line x1="0" y1="20" x2="60" y2="20" stroke="#7B5BFF" stroke-width="2.5"/>
+    <polygon points="60,14 72,20 60,26" fill="#7B5BFF"/>
+    <text class="arrow-label" x="36" y="6">청크 분리</text>
+    <text class="arrow-sub"   x="36" y="42">H2/H3 + 의미 단위</text>
+  </g>
+
+  <!-- RIGHT: Chunks -->
+  <g transform="translate(440, 110)">
+    <!-- Chunk 01 — score 82 (eligible) -->
+    <rect width="380" height="56" rx="8" fill="#EEEEFF" stroke="#3D3DFF" stroke-width="1.5"/>
+    <text class="chunk-tag" x="14" y="20" fill="#3D3DFF">CHUNK 01  ·  점수 82</text>
+    <text class="chunk-body" x="14" y="42" fill="#0B0B0F">Q: MICE 50인 패키지 가격은? · A: 5만원/인, 회의실 6시간 포함…</text>
+    <circle cx="358" cy="28" r="11" fill="#3D3DFF"/>
+    <path d="M353 28 l4 4 l8 -8" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Chunk 02 — score 71 (eligible) -->
+    <g transform="translate(0, 64)">
+      <rect width="380" height="56" rx="8" fill="#EEEEFF" stroke="#3D3DFF" stroke-width="1.5"/>
+      <text class="chunk-tag" x="14" y="20" fill="#3D3DFF">CHUNK 02  ·  점수 71</text>
+      <text class="chunk-body" x="14" y="42" fill="#0B0B0F">표: 회의실 5종 비교 (200석 · 동시통역 · 빔프로젝터 등)</text>
+      <circle cx="358" cy="28" r="11" fill="#3D3DFF"/>
+      <path d="M353 28 l4 4 l8 -8" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Chunk 03 — score 28 (ineligible) -->
+    <g transform="translate(0, 128)">
+      <rect width="380" height="56" rx="8" fill="#F5F5F7" stroke="#E8E8EA" stroke-width="1"/>
+      <text class="chunk-tag" x="14" y="20" fill="#9A9AA3">CHUNK 03  ·  점수 28</text>
+      <text class="chunk-body" x="14" y="42" fill="#9A9AA3">"그것은 다음과 같이 진행됩니다…" (지시어 시작 · 주어 누락)</text>
+      <circle cx="358" cy="28" r="11" fill="#E8E8EA"/>
+      <path d="M353 23 l10 10 M363 23 l-10 10" stroke="#9A9AA3" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <!-- Chunk 04 — score 35 (ineligible) -->
+    <g transform="translate(0, 192)">
+      <rect width="380" height="56" rx="8" fill="#F5F5F7" stroke="#E8E8EA" stroke-width="1"/>
+      <text class="chunk-tag" x="14" y="20" fill="#9A9AA3">CHUNK 04  ·  점수 35</text>
+      <text class="chunk-body" x="14" y="42" fill="#9A9AA3">긴 한 문단 · 표 리스트 없음 · 직답 없음</text>
+      <circle cx="358" cy="28" r="11" fill="#E8E8EA"/>
+      <path d="M353 23 l10 10 M363 23 l-10 10" stroke="#9A9AA3" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <!-- Chunk 05 — score 65 (eligible) -->
+    <g transform="translate(0, 256)">
+      <rect width="380" height="56" rx="8" fill="#EEEEFF" stroke="#3D3DFF" stroke-width="1.5"/>
+      <text class="chunk-tag" x="14" y="20" fill="#3D3DFF">CHUNK 05  ·  점수 65</text>
+      <text class="chunk-body" x="14" y="42" fill="#0B0B0F">Q: 노바스테이 광화문 주차 가능? · A: 지하 60대, 투숙객 무료</text>
+      <circle cx="358" cy="28" r="11" fill="#3D3DFF"/>
+      <path d="M353 28 l4 4 l8 -8" stroke="#FFFFFF" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+
+  <!-- Footer note -->
+  <text class="footer" x="440" y="475">✓ 점수 50점 이상 청크만 AI 답변에 인용됩니다.  5개 청크 중 3개만 인용 적격입니다.</text>
+</svg>

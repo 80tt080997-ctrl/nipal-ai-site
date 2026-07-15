@@ -1,0 +1,4 @@
+<div class="callout callout--{{ include.type | default: 'note' }}">
+  {%- if include.title -%}<div class="callout-title">{{ include.title }}</div>{%- endif -%}
+  <div class="callout-body">{{ include.body | markdownify }}</div>
+</div>

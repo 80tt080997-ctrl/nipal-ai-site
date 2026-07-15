@@ -1,0 +1,91 @@
+---
+layout: default
+---
+{% assign nipal = site.data.authors.nipal %}
+
+<section class="blog-index">
+  <div class="container">
+
+    <!-- Hub header -->
+    <header class="blog-index-header">
+      <div class="eyebrow">NIPAL AI BLOG</div>
+      <h1 class="blog-index-title">AI 검색 시대의 마케팅 노트</h1>
+      <p class="blog-index-sub">GEO, AI SEO, 콘텐츠 운영에 필요한 정보를 한곳에.</p>
+    </header>
+
+    {% if site.posts.size == 0 %}
+    <div class="blog-empty">
+      <p>첫 글이 곧 발행됩니다.</p>
+    </div>
+    {% else %}
+
+    {% comment %} Category tabs — 클라이언트 필터 (별도 카테고리 페이지 없음) {% endcomment %}
+    {% assign categories = site.posts | map: 'category' | compact | uniq %}
+    {% if site.posts.size > 1 and categories.size > 1 %}
+    <nav class="blog-index-tabs" aria-label="카테고리">
+      <a href="#" class="is-active" data-cat-filter="">전체</a>
+      {% for cat in categories %}
+      <a href="#" data-cat-filter="{{ cat }}">{{ cat }}</a>
+      {% endfor %}
+    </nav>
+    {% endif %}
+
+    <div class="blog-grid">
+      {% for post in site.posts %}
+      {% assign author = site.data.authors[post.author_id] | default: nipal %}
+      {% assign before_style = post.content | split: '<style' | first %}
+      {% assign after_style = post.content | split: '</style>' | last %}
+      {% assign clean_content = before_style | append: after_style %}
+      {% assign word_count = clean_content | strip_html | strip_newlines | size %}
+      {% assign read_time = word_count | divided_by: 600 | plus: 1 %}
+      <article class="blog-card" data-category="{{ post.category }}">
+        <a href="{{ post.url }}">
+          {% if post.image %}
+          <div class="blog-card-thumb blog-card-thumb--image" aria-hidden="true">
+            <img src="{{ post.image }}" alt="" loading="lazy">
+          </div>
+          {% else %}
+          <div class="blog-card-thumb" aria-hidden="true">
+            <span class="blog-card-thumb-label">{{ post.category | default: 'GEO' }}</span>
+            <span class="blog-card-thumb-mono">N</span>
+          </div>
+          {% endif %}
+          <div class="blog-card-body">
+            {% if post.category %}<span class="blog-card-cat">{{ post.category }}</span>{% endif %}
+            <h2 class="blog-card-title">{{ post.title }}</h2>
+            {% if post.description %}<p class="blog-card-desc">{{ post.description }}</p>{% endif %}
+            <div class="blog-card-meta">
+              <img src="{{ author.avatar }}" alt="{{ author.name }}" class="blog-card-avatar">
+              <span class="blog-card-author">{{ author.name }}</span>
+              <span class="blog-card-dot">·</span>
+              <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+              <span class="blog-card-dot">·</span>
+              <span class="blog-card-read">{{ read_time }}분</span>
+            </div>
+          </div>
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+
+    <script>
+    (function () {
+      var tabs = document.querySelectorAll('[data-cat-filter]');
+      var cards = document.querySelectorAll('.blog-card[data-category]');
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function (e) {
+          e.preventDefault();
+          var cat = tab.getAttribute('data-cat-filter');
+          tabs.forEach(function (t) { t.classList.toggle('is-active', t === tab); });
+          cards.forEach(function (card) {
+            card.style.display = (!cat || card.getAttribute('data-category') === cat) ? '' : 'none';
+          });
+        });
+      });
+    })();
+    </script>
+
+    {% endif %}
+
+  </div>
+</section>

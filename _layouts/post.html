@@ -1,0 +1,134 @@
+---
+layout: default
+---
+{% assign author = site.data.authors[page.author_id] | default: site.data.authors.nipal %}
+{% assign words_per_min = 600 %}
+{% assign before_style = content | split: '<style' | first %}
+{% assign after_style = content | split: '</style>' | last %}
+{% assign clean_content = before_style | append: after_style %}
+{% assign word_count = clean_content | strip_html | strip_newlines | size %}
+{% assign read_time = word_count | divided_by: words_per_min | plus: 1 %}
+
+<!-- Reading progress widget — 카드형 도넛 -->
+<div class="reading-widget" data-reading-widget aria-hidden="true">
+  <svg class="reading-widget-donut" viewBox="0 0 36 36" aria-hidden="true">
+    <defs>
+      <linearGradient id="readingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#4d57f5"/>
+        <stop offset="100%" stop-color="#7052f3"/>
+      </linearGradient>
+    </defs>
+    <circle class="reading-widget-track" cx="18" cy="18" r="15"></circle>
+    <circle class="reading-widget-arc" cx="18" cy="18" r="15"></circle>
+  </svg>
+  <span class="reading-widget-pct" data-reading-pct>0%</span>
+  <button type="button" class="reading-widget-top" data-reading-top aria-label="맨 위로 가기" title="맨 위로 가기">↑</button>
+</div>
+
+<article class="blog-post">
+
+  <!-- Hero band: 카테고리 + 제목 + 부제 + 메타 (post-grid와 같은 그리드라 정렬 일치) -->
+  <header class="post-hero">
+    <div class="post-grid post-grid--hero">
+      <div class="post-main">
+        {% if page.category %}<span class="post-cat">{{ page.category }}</span>{% endif %}
+        <h1 class="post-title">{{ page.title }}</h1>
+        {% if page.description %}<p class="post-lede">{{ page.description }}</p>{% endif %}
+        <div class="post-meta">
+          <span class="post-meta-author">
+            <img src="{{ author.avatar }}" alt="{{ author.name }}" class="post-meta-avatar">
+            <span>
+              <strong>{{ author.name }}</strong>
+              <em>{{ author.role }}</em>
+            </span>
+          </span>
+          <span class="post-meta-divider"></span>
+          <time class="post-meta-date" datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%Y년 %-m월 %-d일" }}</time>
+          <span class="post-meta-divider"></span>
+          <span class="post-meta-read">{{ read_time }}분 읽기</span>
+        </div>
+      </div>
+      <aside class="post-sidebar post-sidebar--hero" aria-hidden="true"></aside>
+    </div>
+  </header>
+
+  <!-- Body grid: 본문 + sticky TOC sidebar -->
+  <div class="post-grid">
+
+    <div class="post-main">
+      {% if page.image %}
+      <figure class="post-hero-image">
+        <img src="{{ page.image }}" alt="{{ page.title }} 썸네일">
+      </figure>
+      {% endif %}
+
+      {% if page.summary %}
+      <aside class="post-summary" aria-label="마케터를 위한 핵심 요약">
+        <div class="post-summary-head">
+          <span class="post-summary-icon">📌</span>
+          <span class="post-summary-label">마케터를 위한 핵심 요약</span>
+        </div>
+        <div class="post-summary-body">
+          {{ page.summary | markdownify }}
+        </div>
+      </aside>
+      {% endif %}
+
+      <div class="post-body">
+        {{ content }}
+      </div>
+
+      <!-- Author bio box -->
+      <div class="post-author-box">
+        <img src="{{ author.avatar }}" alt="{{ author.name }}" class="post-author-avatar">
+        <div class="post-author-info">
+          <div class="post-author-name">{{ author.name }} <span>{{ author.role }}</span></div>
+          <p class="post-author-bio">{{ author.bio }}</p>
+        </div>
+      </div>
+
+      <!-- CTA card -->
+      <div class="post-cta-card">
+        <h3>AI는 지금 어떤 브랜드를 추천하고 있을까요?</h3>
+        <p>회사 이름과 소개만 입력하면 ChatGPT·Gemini·Perplexity에 질문 3개씩, 답변 9개를 30초 안에 받아 AI 노출 점수를 확인할 수 있습니다. 가입도 결제도 없습니다.</p>
+        <a href="https://app.nipal-ai.com/" class="btn-primary">30초 무료진단 시작 →</a>
+      </div>
+
+      <!-- Related posts -->
+      {% assign related = site.posts | where_exp: "p", "p.url != page.url" | sort: "date" | reverse %}
+      {% if related.size > 0 %}
+      <section class="post-related" aria-label="같이 읽으면 좋은 글">
+        <h3 class="post-related-title">같이 읽으면 좋은 글</h3>
+        <div class="post-related-grid">
+          {% for p in related limit:3 %}
+          <a class="post-related-card" href="{{ p.url }}">
+            {% if p.category %}<span class="post-related-cat">{{ p.category }}</span>{% endif %}
+            <strong class="post-related-name">{{ p.title }}</strong>
+            {% if p.description %}<span class="post-related-desc">{{ p.description | truncate: 80 }}</span>{% endif %}
+            <span class="post-related-date">{{ p.date | date: "%Y-%m-%d" }}</span>
+          </a>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+      <nav class="post-nav">
+        <a href="/blog/" class="post-back">← 블로그 전체 보기</a>
+      </nav>
+    </div>
+
+    <!-- Right sticky sidebar (TOC + Share) -->
+    <aside class="post-sidebar" aria-label="목차 및 공유">
+      <div class="post-toc">
+        <div class="post-toc-head">목차</div>
+        <ol class="post-toc-list"></ol>
+        <div class="post-toc-share">
+          <button type="button" class="post-share-btn" data-share="copy" aria-label="링크 복사">🔗 링크 복사</button>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</article>
+
+<script src="/assets/js/blog.js" defer></script>

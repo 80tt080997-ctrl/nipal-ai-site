@@ -1,0 +1,33 @@
+# NIPAL AI
+
+> AI 답변에서 브랜드가 발견되고 추천·인용되도록 인용 가능한 콘텐츠를 만들고 배포하는 AEO 전문 팀. ChatGPT·Gemini·Perplexity 답변 가시성을 측정하고, 측정 → 진단 → 전략 → 발행 → 재측정의 폐쇄 루프로 운영합니다.
+
+## 핵심 서비스
+
+- **AEO (답변 엔진 최적화)** — ChatGPT·Gemini·Perplexity 3개 AI 답변 엔진에서 브랜드 가시성 측정·진단·개선
+- **30초 무료진단** — 회사 이름과 소개만 입력하면 3개 AI에 질문 3개씩, 답변 9개와 AI 노출 점수를 30초 안에 확인 (가입·결제 없음)
+
+## 주요 페이지
+
+- [NIPAL AI 홈](https://nipal-ai.com/): AEO 서비스 소개, 4단계 운영 프로세스, 신뢰 근거
+- [30초 무료진단](https://app.nipal-ai.com/): ChatGPT·Gemini·Perplexity 즉시 측정 도구
+- [문의하기](https://app.nipal-ai.com/contact): 목표 질문 추천과 실시간 견적
+- [블로그](https://nipal-ai.com/blog/): GEO·AEO 인사이트와 실행 노트
+
+## 자체 용어 사전
+
+- **AEO (Answer Engine Optimization)**: AI가 답변을 생성할 때 브랜드를 찾고, 신뢰하고, 인용할 수 있도록 웹사이트와 콘텐츠를 준비하는 작업
+- **GEO (Generative Engine Optimization)**: 같은 목표를 가리키는 용어 — 생성형 엔진 최적화
+- **AI 노출 점수**: ChatGPT·Gemini·Perplexity 답변에서 브랜드가 언급·추천되는 정도를 100점 만점으로 나타낸 점수
+- **청크(Chunk)**: AI가 페이지를 인용할 때 실제로 가져가는 단락 단위 콘텐츠 블록
+
+## 자주 묻는 질문
+
+### Q. AEO와 SEO는 무엇이 다른가요?
+SEO는 검색 순위에 들어가는 것이 목표이고, AEO는 AI가 고르는 소수의 답변 안에 들어가는 것이 목표입니다. NIPAL AI는 AEO에 집중하며, 5,000편 이상의 SEO 콘텐츠를 직접 수행한 경험을 기반으로 합니다.
+
+### Q. 어떤 AI를 측정하나요?
+ChatGPT, Gemini, Perplexity 세 가지 AI 답변 엔진을 측정합니다.
+
+### Q. 결과는 얼마나 걸리나요?
+30초 무료진단은 즉시 결과를 보여줍니다. 운영 성과는 업종·기존 콘텐츠·경쟁 환경에 따라 다르며, 일반적으로 2–4주에 AI 인지 변화 측정이 시작되고 1–3개월에 답변 인용 변화가 나타나는 흐름을 안내합니다.

@@ -1,0 +1,141 @@
+/* ==========================================================================
+   NIPAL AI — Blog site chrome (header · footer · 공통 레이아웃)
+   홈(index.html) 디자인 문법: 순백 배경 + #f7f6f3 타일 + #e4e4e5 라인 + 점선 구분 + 알약 버튼
+   ========================================================================== */
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+img, svg { max-width: 100%; }
+:focus-visible { outline: 3px solid rgba(77, 87, 245, 0.32); outline-offset: 2px; }
+
+.container {
+  width: min(var(--container), calc(100% - 48px));
+  margin-inline: auto;
+}
+
+/* channel.io식 점선 구분 */
+.sep-dots {
+  position: relative;
+}
+.sep-dots::before {
+  content: "";
+  display: block;
+  height: 3px;
+  background-image: radial-gradient(circle, #e4e4e5 1.5px, transparent 1.6px);
+  background-size: 13.1px 3px;
+  background-repeat: repeat-x;
+  background-position: left center;
+}
+
+/* ==========================================================================
+   Header — 슬림 톱바 (app.nipal-ai.com 도구 페이지와 동일 문법)
+   ========================================================================== */
+
+.site-top {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: rgba(255, 255, 255, 0.92);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid #ececed;
+}
+.st-inner {
+  width: min(var(--container), calc(100% - 48px));
+  margin: 0 auto;
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.brand-logo { height: 24px; width: auto; display: block; }
+.st-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink-500);
+}
+.st-nav a { padding: 6px 2px; transition: color 0.15s ease; }
+.st-nav a:hover { color: var(--ink-900); }
+.st-nav a.is-active { color: var(--ink-900); }
+.st-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.st-ghost {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--ink-700);
+  border: 1px solid var(--ink-100);
+  border-radius: 999px;
+  padding: 9px 17px;
+  transition: border-color 0.18s ease, color 0.18s ease;
+}
+.st-ghost:hover { border-color: #c9c9cc; color: var(--ink-900); }
+.st-cta {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--ink-900);
+  border-radius: 999px;
+  padding: 10px 18px;
+  transition: background 0.18s ease;
+}
+.st-cta:hover { background: #2b2d34; }
+
+@media (max-width: 640px) {
+  .st-nav { display: none; }
+  .st-ghost { display: none; }
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  margin-top: 96px;
+  padding: 56px 0 44px;
+}
+.site-footer .footer-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding-top: 42px;
+}
+.footer-brand-blurb {
+  max-width: 460px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-500);
+  margin: 18px 0 22px;
+}
+.biz-info { margin: 0; font-size: 12.5px; color: var(--ink-400); line-height: 1.8; }
+.biz-info div { display: flex; gap: 8px; }
+.biz-info dt { font-weight: 600; color: var(--ink-500); flex: 0 0 auto; }
+.biz-info dt::after { content: ":"; }
+.biz-info dd { margin: 0; }
+.biz-info a { color: inherit; }
+.biz-info a:hover { color: var(--ink-700); }
+.footer-links {
+  display: flex;
+  gap: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-600);
+  justify-content: flex-end;
+}
+.footer-links a:hover { color: var(--ink-900); }
+.copyright { font-size: 12.5px; color: var(--ink-400); margin: 20px 0 0; text-align: right; }
+
+@media (max-width: 760px) {
+  .site-footer .footer-grid { display: block; }
+  .footer-links { justify-content: flex-start; margin-top: 28px; }
+  .copyright { text-align: left; }
+}
