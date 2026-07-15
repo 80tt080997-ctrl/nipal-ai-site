@@ -3,7 +3,7 @@ title: "로펌 GEO 최적화 가이드 — AI가 선택한 로펌들의 8가지 
 description: "ChatGPT·Perplexity·Gemini·Claude 4가지 AI에 변호사 추천·비용·분야 질문 25개씩, 모두 100번을 물어본 측정 기록입니다. AI마다 어떤 식으로 답하는지, 어떤 로펌이 답변에 등장하고 어떤 로펌은 빠지는지, 답변에 등장한 사이트들이 공유하는 8가지 공통점은 무엇인지 정리한 로펌 GEO 가이드입니다."
 date: 2026-05-19 10:00:00 +0900
 last_modified_at: 2026-05-19 23:00:00 +0900
-author_id: nipal
+author_id: jace
 category: 실행 노트
 tags: [GEO, AEO, 법무법인, 변호사, 측정, ChatGPT, Perplexity, Gemini, Claude]
 image: /assets/img/blog/lawfirm-geo-100-cells/og.png
@@ -587,7 +587,7 @@ GEO·AEO·E-E-A-T 같은 GEO 전문 약어가 자주 나오지만, 최대한 풀
       "description": "ChatGPT·Perplexity·Gemini·Claude 4가지 AI에 변호사 추천·비용·분야 질문 25개씩, 모두 100번을 물어본 측정 기록입니다. AI마다 어떤 식으로 답하는지, 어떤 로펌이 답변에 등장하고 어떤 로펌은 빠지는지, 답변에 등장한 사이트들이 공유하는 8가지 공통점은 무엇인지 정리한 로펌 GEO 가이드입니다.",
       "datePublished": "2026-05-19T10:00:00+09:00",
       "dateModified": "2026-05-19T23:00:00+09:00",
-      "author": {"@type": "Organization", "name": "NIPAL AI", "url": "https://nipal-ai.com/"},
+      "author": {"@type": "Person", "name": "Jace", "jobTitle": "NIPAL AI 대표", "url": "https://nipal-ai.com/"},
       "publisher": {"@type": "Organization", "name": "NIPAL AI", "url": "https://nipal-ai.com/", "logo": {"@type": "ImageObject", "url": "https://nipal-ai.com/assets/img/logo.png"}},
       "image": "https://nipal-ai.com/assets/img/blog/lawfirm-geo-100-cells/og.png",
       "mainEntityOfPage": "https://nipal-ai.com/blog/lawfirm-geo-100-cells/",

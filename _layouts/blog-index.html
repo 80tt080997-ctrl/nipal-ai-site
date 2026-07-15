@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% assign nipal = site.data.authors.nipal %}
+{% assign jace_a = site.data.authors.jace %}
 
 <section class="blog-index">
   <div class="container">
@@ -32,7 +32,7 @@ layout: default
 
     <div class="blog-grid">
       {% for post in site.posts %}
-      {% assign author = site.data.authors[post.author_id] | default: nipal %}
+      {% assign author = site.data.authors[post.author_id] | default: jace_a %}
       {% assign before_style = post.content | split: '<style' | first %}
       {% assign after_style = post.content | split: '</style>' | last %}
       {% assign clean_content = before_style | append: after_style %}

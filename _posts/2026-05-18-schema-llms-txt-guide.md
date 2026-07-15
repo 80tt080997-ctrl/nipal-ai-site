@@ -3,7 +3,7 @@ title: "Schema.org & llms.txt 완전 가이드 — AI가 우리 브랜드를 읽
 description: "Google이 _generative AI 검색에 특별한 schema.org 마크업은 없다_고 공식 명시한 시대에 Schema.org와 llms.txt를 왜·어떻게 쓸까. Schema.org 공식 + Google AI optimization guide + SISTRIX TOP 100 + 변호사·세무사 vertical Schema 패턴까지 묶어 — 오늘 적용 가능한 6가지 마크업 패턴을 정리합니다."
 date: 2026-05-18 19:00:00 +0900
 last_modified_at: 2026-05-18 19:00:00 +0900
-author_id: nipal
+author_id: jace
 category: 실행 노트
 tags: [GEO, AEO, Schema, llms.txt, JSON-LD, structured-data, LegalService, AccountingService]
 image: /assets/img/blog/schema-llms-txt-guide/og.png
@@ -654,7 +654,7 @@ chatgpt, perplexity, ai, optimization
       "headline": "Schema.org & llms.txt 완전 가이드 — AI가 우리 브랜드를 읽게 만드는 6가지 마크업 패턴",
       "datePublished": "2026-05-18T19:00:00+09:00",
       "dateModified": "2026-05-18T19:00:00+09:00",
-      "author": {"@type": "Organization", "name": "NIPAL AI", "url": "https://nipal-ai.com/"},
+      "author": {"@type": "Person", "name": "Jace", "jobTitle": "NIPAL AI 대표", "url": "https://nipal-ai.com/"},
       "publisher": {"@type": "Organization", "name": "NIPAL AI", "url": "https://nipal-ai.com", "logo": {"@type": "ImageObject", "url": "https://nipal-ai.com/assets/img/logo.png"}},
       "image": "https://nipal-ai.com/assets/img/blog/schema-llms-txt-guide/og.png",
       "about": [

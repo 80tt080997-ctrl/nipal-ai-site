@@ -3,7 +3,7 @@ title: "청크 단위 처방 — AI에 인용되는 페이지를 쓰는 5가지 
 description: "GEO 실행은 페이지가 아니라 청크 단위로 일어납니다. Anthropic·LlamaIndex·EMNLP 학술 출처를 바탕으로 오늘 적용할 5가지 작성 패턴을 정리합니다."
 date: 2026-05-16 10:00:00 +0900
 last_modified_at: 2026-05-14 12:00:00 +0900
-author_id: nipal
+author_id: jace
 category: 실행 노트
 tags: [GEO, AEO, chunk, RAG, contextual-retrieval, writing]
 image: /assets/img/blog/chunk-prescription/og.png
@@ -780,8 +780,9 @@ Google이 query fan-out을 어떻게 설명하는지 공식 채널 영상으로 
       "datePublished": "2026-05-16T10:00:00+09:00",
       "dateModified": "2026-05-14T12:00:00+09:00",
       "author": {
-        "@type": "Organization",
-        "name": "NIPAL AI",
+        "@type": "Person",
+        "name": "Jace",
+        "jobTitle": "NIPAL AI 대표",
         "url": "https://nipal-ai.com/"
       },
       "publisher": {
