@@ -942,10 +942,60 @@ document.getElementById('year').textContent=new Date().getFullYear();
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"NIPAL AI",
-  "url":"https://nipal-ai.com",
-  "description":"AI 답변에서 브랜드가 발견되고 추천·인용되도록 인용 가능한 콘텐츠를 만들고 배포하는 AEO 전문 팀"
+  "@graph":[
+    {
+      "@type":"Organization",
+      "@id":"https://nipal-ai.com/#organization",
+      "name":"NIPAL AI",
+      "legalName":"모먼트",
+      "url":"https://nipal-ai.com",
+      "logo":{"@type":"ImageObject","url":"https://nipal-ai.com/assets/img/logo.png","width":1262,"height":220},
+      "image":"https://nipal-ai.com/og.png",
+      "description":"AI 답변에서 브랜드가 발견되고 추천·인용되도록 인용 가능한 콘텐츠를 만들고 배포하는 AEO 전문 팀",
+      "foundingDate":"2023",
+      "founder":{"@type":"Person","name":"김승재"},
+      "email":"ask@nipal-ai.com",
+      "telephone":"+82-32-325-3927",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"길주로77번길 55-19, 806호",
+        "addressLocality":"부천시",
+        "addressRegion":"경기도",
+        "addressCountry":"KR"
+      },
+      "contactPoint":{
+        "@type":"ContactPoint",
+        "contactType":"customer support",
+        "email":"ask@nipal-ai.com",
+        "telephone":"+82-32-325-3927",
+        "availableLanguage":"Korean"
+      },
+      "areaServed":"KR",
+      "knowsAbout":["Answer Engine Optimization","Generative Engine Optimization","AI 검색 최적화","ChatGPT","Gemini","Perplexity"]
+    },
+    {
+      "@type":"WebSite",
+      "@id":"https://nipal-ai.com/#website",
+      "url":"https://nipal-ai.com/",
+      "name":"NIPAL AI",
+      "inLanguage":"ko-KR",
+      "publisher":{"@id":"https://nipal-ai.com/#organization"}
+    },
+    {
+      "@type":"Service",
+      "@id":"https://nipal-ai.com/#service",
+      "serviceType":"AEO (답변 엔진 최적화)",
+      "name":"NIPAL AI AEO 대행 서비스",
+      "description":"ChatGPT·Gemini·Perplexity 답변에서 브랜드가 추천·인용되도록 측정→진단→전략→발행→재측정의 폐쇄 루프로 운영하는 AEO 전문 서비스. 무료진단은 3개 AI에 질문 3개씩, 답변 9개와 AI 노출 점수를 30초 안에 제공합니다.",
+      "provider":{"@id":"https://nipal-ai.com/#organization"},
+      "areaServed":"KR",
+      "availableChannel":{
+        "@type":"ServiceChannel",
+        "name":"30초 무료진단",
+        "serviceUrl":"https://app.nipal-ai.com/"
+      }
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
