@@ -1,0 +1,65 @@
+# NIPAL AI — robots.txt
+# AI 답변 엔진이 우리 콘텐츠를 발견·크롤·인용하도록 명시적으로 허용합니다.
+# (AEO 관점: 인용되려면 크롤 허용이 전제이므로 AI 봇을 차단하지 않습니다.)
+
+# 일반 검색엔진 · 기타 모든 크롤러 — 전체 허용
+User-agent: *
+Allow: /
+
+# ── OpenAI (ChatGPT · Copilot 소스) ──
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# ── Anthropic (Claude) ──
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# ── Perplexity ──
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# ── Google (Gemini · AI Overviews · Vertex AI) ──
+User-agent: Google-Extended
+Allow: /
+
+# ── Microsoft Bing (Copilot 인덱스) ──
+User-agent: Bingbot
+Allow: /
+
+# ── Apple Intelligence ──
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ── Common Crawl (다수 LLM 학습 데이터 소스) ──
+User-agent: CCBot
+Allow: /
+
+# ── 기타 AI 크롤러 ──
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+Sitemap: https://nipal-ai.com/sitemap.xml
